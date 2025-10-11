@@ -92,7 +92,23 @@ window.onload=function(){
         square.addEventListener('mouseout',function(e){
             e.target.classList.remove('hover');
         });
+
     });
+
+    const ngbutton=document.querySelector('.btn');
+    ngbutton.addEventListener('click', function(e){
+        grid.forEach(square=>{
+            square.classList.remove('X');
+            square.textContent="";
+
+        });
+        const stats=document.querySelector('#status');
+        stats.classList.remove('you-won')
+        stats.textContent="Move your mouse over a square and click to play an X or an O";
+
+
+    });
+
 };
 
  
