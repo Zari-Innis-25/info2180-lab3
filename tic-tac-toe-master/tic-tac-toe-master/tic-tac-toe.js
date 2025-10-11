@@ -29,6 +29,14 @@ grid.forEach((square, index)=>{
         const win=[];
         }
     });
+    square.addEventListener('mouseover',function(e){
+        e.target.classList.add('hover');
+    });
+
+    square.addEventListener('mouseout',function(e){
+        e.target.classList.remove('hover');
+    });
+
 });
 
 
